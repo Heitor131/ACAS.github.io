@@ -1,0 +1,204 @@
+/* Suaviza a rolagem */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Configurações gerais do body */
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden; /* Evita rolagem horizontal */
+    overflow-y: auto; /* Permite rolagem vertical */
+    margin-top: 80px; /* Compensa a altura da barra fixa */
+    scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+    display: none; /* Oculta a barra de rolagem no Chrome, Edge e Safari */
+}
+
+html, body {
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove espaçamentos padrão */
+    width: 100%; /* Garante que ocupe toda a largura */
+    height: 100%; /* Garante que ocupe toda a altura */
+    overflow-x: hidden; /* Permite barra de rolagem horizontal quando necessário */
+    overflow-y: auto; /* Remove barra de rolagem vertical */
+}
+
+.title_prin{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 3rem;
+    gap: 1rem;
+    font-size: 1.6rem; /* Tamanho maior para o título principal */
+}
+
+/* Estilo para títulos */
+.title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 3rem;
+    gap: 1rem;
+    font-size: 2rem; /* Tamanho padrão para títulos */
+}
+
+/* Configuração geral dos contêineres */
+.conteiner {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto; /* Centraliza horizontalmente */
+    padding: 0 1rem; /* Adiciona espaçamento interno */
+    gap: 1rem; /* Espaçamento entre os itens */
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo semi-transparente */
+}
+
+/* Barra de navegação fixa */
+.home {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: flex-start; /* Alinha os itens à esquerda */
+    align-items: center; /* Centraliza os itens verticalmente */
+    flex-direction: row; /* Exibe os itens em linha */
+    gap: 1rem; /* Reduz o espaçamento entre os itens */
+    padding: 0.5rem 1rem; /* Ajusta o espaçamento interno */
+    width: 100%;
+    height: 3rem; /* Ajuste a altura, se necessário */
+    z-index: 10;
+    background-color: transparent; /* Fundo semi-transparente */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(1.5px); /* Adiciona um desfoque ao fundo */
+}
+
+#grupo, #convivio, #sobre-nos, #formacoes {
+    padding-top: 4rem; /* Adiciona espaço acima da seção */
+}
+
+
+
+/* Navegação dentro da barra */
+nav {
+    display: flex;
+    gap: 2rem; /* Espaçamento entre os botões */
+}
+
+/* Botões da barra de navegação */
+.button_inicio, .button_sobre, .button_formaçoes, .button_convivio, .button_grupo, .button_outras, .button_instagram{
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: black;
+    padding: 0.8rem 1.5rem; /* Ajuste no espaçamento interno */
+    border-radius: 0.75rem;
+    font-size: 0.9rem; /* Tamanho reduzido para melhor ajuste */
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none; /* Remove sublinhado */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Adiciona uma borda sutil */
+    transition: all 0.3s ease; /* Suaviza interações */
+}
+
+/* Efeito hover nos botões */
+.button_inicio:hover, .button_sobre:hover, .button_formaçao:hover, 
+.button_convivio:hover, .button_grupo:hover, .button_outras:hover, 
+.button_instagram{
+    background-color: rgba(255, 255, 255, 0.4);
+    transform: scale(1.05); /* Aumenta levemente o botão */
+}
+
+/* Configuração da seção de início */
+.Inicio {
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+}
+
+
+/* Configuração do conteúdo */
+.content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+    gap: 1.5rem;
+}
+
+#insta{
+    width: 40px;
+    height: 40px;
+    border-radius: 34%;
+    margin-right: 0.5rem; /* Adiciona um pequeno espaçamento à direita da imagem */
+}
+
+/* Imagem de fundo */
+#img02 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* Logo da barra de navegação */
+#img01 {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 0.5rem; /* Adiciona um pequeno espaçamento à direita da imagem */
+}
+
+#img_config{
+    margin: 3rem ;
+    width: 300px;
+    height: auto;
+    border-radius: 8px;
+}
+
+
+/* Estilo do título "ACAS" */
+.acas {
+    font-size: 1.2rem; /* Ajusta o tamanho da fonte */
+    font-weight: bold; /* Deixa o texto em negrito */
+    margin: 0; /* Remove margens extras */
+    padding: 0; /* Remove espaçamentos extras */
+    justify-content: center;
+    gap: 0.1rem;
+}
+
+
+
+.ascom,.grupo_musica,.formacao, .liturgia {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.musica-text, .ascom-text, .formacao-text, .liturgia-text {
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 3rem;
+}
+
