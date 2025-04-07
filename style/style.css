@@ -1,4 +1,4 @@
-/* Estilos padrão (Desktop) */
+/* Estilos básicos (Mobile-first) */
 html {
     scroll-behavior: smooth;
 }
@@ -9,232 +9,222 @@ body {
     width: 100%;
     height: 100%;
     overflow-x: hidden;
-    overflow-y: auto;
-    margin-top: 80px;
-    scrollbar-width: none;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
 }
 
-body::-webkit-scrollbar {
-    display: none;
-}
-
-.title_prin {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 3rem;
-    gap: 1rem;
-    font-size: 1.6rem;
-}
-
-.title {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 3rem;
-    gap: 1rem;
-    font-size: 2rem;
-}
-
-.conteiner {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 1rem;
-    gap: 1rem;
-    background-color: rgba(255, 255, 255, 0.8);
-}
-
+/* Barra de navegação */
 .home {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10;
     position: fixed;
     top: 0;
     left: 0;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: row;
-    gap: 1rem;
-    padding: 0.5rem 1rem;
-    width: 100%;
-    height: 3rem;
-    z-index: 10;
-    background-color: transparent;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(1.5px);
 }
 
-#grupo, #convivio, #sobre-nos, #formacoes {
-    padding-top: 4rem; /* Adiciona espaço acima da seção */
+#img01 {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.acas {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
 }
 
 nav {
     display: flex;
-    gap: 2rem;
-}
-
-.button_inicio, .button_sobre, .button_formaçoes, .button_convivio, .button_grupo, .button_outras, .button_instagram {
-    display: inline-block;
-    background-color: rgba(255, 255, 255, 0.2);
-    color: black;
-    padding: 0.8rem 1.5rem;
-    border-radius: 0.75rem;
-    font-size: 0.9rem;
-    font-weight: 600;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
     text-align: center;
-    cursor: pointer;
+}
+
+nav a {
+    display: block;
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 0.8rem;
+    border-radius: 0.5rem;
     text-decoration: none;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    transition: all 0.3s ease;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
-.button_inicio:hover, .button_sobre:hover, .button_formaçoes:hover, 
-.button_convivio:hover, .button_grupo:hover, .button_outras:hover, 
-.button_instagram:hover {
-    background-color: rgba(255, 255, 255, 0.4);
-    transform: scale(1.05);
+nav a:hover {
+    background-color: #e0e0e0;
 }
 
+/* Seção de início */
 .Inicio {
     display: flex;
-    align-items: left;
-    justify-content: center;
     flex-direction: column;
-    position: relative;
-    overflow: hidden;
-    width: 100vw;
-    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+    margin-top: 6rem; /* Para compensar a barra de navegação fixa */
+    text-align: center;
+}
+
+#img02 {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.title_prin {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.title_prin + p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Seções gerais */
+.conteiner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    margin: 1rem 0;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-align: center;
 }
 
 .content {
+    font-size: 1rem;
+    color: #333;
     text-align: center;
+    line-height: 1.5;
+}
+
+/* Imagens nas seções */
+#img_config {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+
+/* Grupos */
+.ascom, .grupo_musica, .formacao, .liturgia {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    margin-top: 2rem;
-    gap: 1.5rem;
-}
-
-#insta{
-    width: 40px;
-    height: 40px;
-    border-radius: 34%;
-    margin-right: 0.5rem; /* Adiciona um pequeno espaçamento à direita da imagem */
-}
-
-/* Imagem de fundo */
-#img02 {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-}
-
-/* Logo da barra de navegação */
-#img01 {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-right: 0.5rem; /* Adiciona um pequeno espaçamento à direita da imagem */
-}
-
-#img_config{
-    margin: 3rem ;
-    width: 300px;
-    height: auto;
-    border-radius: 8px;
-}
-
-/* Estilo do título "ACAS" */
-.acas {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin: 0;
-    padding: 0;
-    justify-content: center;
-    gap: 0.1rem;
-}
-
-.ascom, .grupo_musica, .formacao, .liturgia {
-    display: flex;
-    align-items: center;
     gap: 1rem;
+    margin: 1rem 0;
 }
 
 .musica-text, .ascom-text, .formacao-text, .liturgia-text {
     text-align: center;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    margin: 3rem;
+    font-size: 1rem;
+    color: #555;
 }
 
-/* Estilos para Mobile */
-@media (max-width: 768px) {
+/* Estilos para telas maiores (Desktop) */
+@media (min-width: 768px) {
+    /* Barra de navegação */
     .home {
-        flex-direction: column;
-        align-items: center;
-        gap: 0.5rem;
-        height: auto;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0.5rem 2rem;
+        height: 4rem;
     }
 
     nav {
-        flex-direction: column;
-        gap: 1rem;
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: 2rem;
     }
 
-    .button_inicio, .button_sobre, .button_formaçoes, .button_convivio, 
-    .button_grupo, .button_outras, .button_instagram {
+    nav a {
+        font-size: 0.9rem;
         padding: 0.5rem 1rem;
-        font-size: 0.8rem;
-    }
-
-    .Inicio {
-        height: auto;
-        padding: 1rem;
-    }
-
-    #img02 {
-        height: auto;
-        object-fit: contain;
-    }
-
-    .conteiner {
-        padding: 1rem;
-    }
-
-    .title_prin, .title {
-        font-size: 1.2rem;
-        margin: 1rem;
     }
 
     #img01 {
-        width: 40px;
-        height: 40px;
+        width: 50px;
+        height: 50px;
     }
 
+    /* Seção de início */
+    .Inicio {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 4rem 2rem;
+        margin-top: 4rem;
+    }
+
+    #img02 {
+        max-width: 500px;
+    }
+
+    .title_prin {
+        font-size: 2rem;
+        text-align: left;
+    }
+
+    .title_prin + p {
+        font-size: 1.2rem;
+        text-align: left;
+    }
+
+    /* Seções gerais */
+    .conteiner {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 2rem;
+    }
+
+    .title {
+        font-size: 2rem;
+        text-align: left;
+    }
+
+    .content {
+        font-size: 1.2rem;
+        text-align: left;
+    }
+
+    /* Imagens nas seções */
     #img_config {
-        width: 100%;
-        max-width: 300px;
-        margin: 1rem auto;
+        max-width: 400px;
     }
 
+    /* Grupos */
     .ascom, .grupo_musica, .formacao, .liturgia {
-        flex-direction: column;
-        gap: 1rem;
+        flex-direction: row;
+        justify-content: space-between;
     }
 
     .musica-text, .ascom-text, .formacao-text, .liturgia-text {
-        text-align: center;
-        margin: 1rem;
+        text-align: left;
     }
 }
 
