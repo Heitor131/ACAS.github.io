@@ -1,121 +1,101 @@
-/* Suaviza a rolagem */
+/* Estilos padrão (Desktop) */
 html {
     scroll-behavior: smooth;
 }
 
-/* Configurações gerais do body */
 body {
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100%;
-    overflow-x: hidden; /* Evita rolagem horizontal */
-    overflow-y: auto; /* Permite rolagem vertical */
-    margin-top: 80px; /* Compensa a altura da barra fixa */
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin-top: 80px;
     scrollbar-width: none;
 }
 
 body::-webkit-scrollbar {
-    display: none; /* Oculta a barra de rolagem no Chrome, Edge e Safari */
+    display: none;
 }
 
-html, body {
-    margin: 0; /* Remove margens padrão */
-    padding: 0; /* Remove espaçamentos padrão */
-    width: 100%; /* Garante que ocupe toda a largura */
-    height: 100%; /* Garante que ocupe toda a altura */
-    overflow-x: hidden; /* Permite barra de rolagem horizontal quando necessário */
-    overflow-y: auto; /* Remove barra de rolagem vertical */
-}
-
-.title_prin{
+.title_prin {
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin: 3rem;
     gap: 1rem;
-    font-size: 1.6rem; /* Tamanho maior para o título principal */
+    font-size: 1.6rem;
 }
 
-/* Estilo para títulos */
-.title{
+.title {
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin: 3rem;
     gap: 1rem;
-    font-size: 2rem; /* Tamanho padrão para títulos */
+    font-size: 2rem;
 }
 
-/* Configuração geral dos contêineres */
 .conteiner {
     display: flex;
     align-items: center;
     flex-direction: column;
     width: 100%;
-    margin: 0 auto; /* Centraliza horizontalmente */
-    padding: 0 1rem; /* Adiciona espaçamento interno */
-    gap: 1rem; /* Espaçamento entre os itens */
-    background-color: rgba(255, 255, 255, 0.8); /* Fundo semi-transparente */
+    margin: 0 auto;
+    padding: 0 1rem;
+    gap: 1rem;
+    background-color: rgba(255, 255, 255, 0.8);
 }
 
-/* Barra de navegação fixa */
 .home {
     display: flex;
     position: fixed;
     top: 0;
     left: 0;
-    display: flex;
-    justify-content: flex-start; /* Alinha os itens à esquerda */
-    align-items: center; /* Centraliza os itens verticalmente */
-    flex-direction: row; /* Exibe os itens em linha */
-    gap: 1rem; /* Reduz o espaçamento entre os itens */
-    padding: 0.5rem 1rem; /* Ajusta o espaçamento interno */
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    gap: 1rem;
+    padding: 0.5rem 1rem;
     width: 100%;
-    height: 3rem; /* Ajuste a altura, se necessário */
+    height: 3rem;
     z-index: 10;
-    background-color: transparent; /* Fundo semi-transparente */
+    background-color: transparent;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(1.5px); /* Adiciona um desfoque ao fundo */
+    backdrop-filter: blur(1.5px);
 }
 
 #grupo, #convivio, #sobre-nos, #formacoes {
     padding-top: 4rem; /* Adiciona espaço acima da seção */
 }
 
-
-
-/* Navegação dentro da barra */
 nav {
     display: flex;
-    gap: 2rem; /* Espaçamento entre os botões */
+    gap: 2rem;
 }
 
-/* Botões da barra de navegação */
-.button_inicio, .button_sobre, .button_formaçoes, .button_convivio, .button_grupo, .button_outras, .button_instagram{
+.button_inicio, .button_sobre, .button_formaçoes, .button_convivio, .button_grupo, .button_outras, .button_instagram {
     display: inline-block;
     background-color: rgba(255, 255, 255, 0.2);
     color: black;
-    padding: 0.8rem 1.5rem; /* Ajuste no espaçamento interno */
+    padding: 0.8rem 1.5rem;
     border-radius: 0.75rem;
-    font-size: 0.9rem; /* Tamanho reduzido para melhor ajuste */
+    font-size: 0.9rem;
     font-weight: 600;
     text-align: center;
     cursor: pointer;
-    text-decoration: none; /* Remove sublinhado */
-    border: 1px solid rgba(255, 255, 255, 0.3); /* Adiciona uma borda sutil */
-    transition: all 0.3s ease; /* Suaviza interações */
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
 }
 
-/* Efeito hover nos botões */
-.button_inicio:hover, .button_sobre:hover, .button_formaçao:hover, 
+.button_inicio:hover, .button_sobre:hover, .button_formaçoes:hover, 
 .button_convivio:hover, .button_grupo:hover, .button_outras:hover, 
-.button_instagram{
+.button_instagram:hover {
     background-color: rgba(255, 255, 255, 0.4);
-    transform: scale(1.05); /* Aumenta levemente o botão */
+    transform: scale(1.05);
 }
 
-/* Configuração da seção de início */
 .Inicio {
     display: flex;
     align-items: left;
@@ -127,8 +107,6 @@ nav {
     height: 100vh;
 }
 
-
-/* Configuração do conteúdo */
 .content {
     text-align: center;
     display: flex;
@@ -172,20 +150,17 @@ nav {
     border-radius: 8px;
 }
 
-
 /* Estilo do título "ACAS" */
 .acas {
-    font-size: 1.2rem; /* Ajusta o tamanho da fonte */
-    font-weight: bold; /* Deixa o texto em negrito */
-    margin: 0; /* Remove margens extras */
-    padding: 0; /* Remove espaçamentos extras */
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
     justify-content: center;
     gap: 0.1rem;
 }
 
-
-
-.ascom,.grupo_musica,.formacao, .liturgia {
+.ascom, .grupo_musica, .formacao, .liturgia {
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -202,70 +177,64 @@ nav {
     margin: 3rem;
 }
 
-/* Estilos para telas menores que 768px (celulares e tablets pequenos) */
+/* Estilos para Mobile */
 @media (max-width: 768px) {
-    /* Ajusta a barra de navegação */
     .home {
-        flex-direction: column; /* Empilha os itens verticalmente */
-        align-items: center; /* Centraliza os itens */
-        gap: 0.5rem; /* Reduz o espaçamento entre os itens */
-        height: auto; /* Ajusta a altura automaticamente */
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        height: auto;
     }
 
     nav {
-        flex-direction: column; /* Empilha os links verticalmente */
-        gap: 1rem; /* Adiciona espaçamento entre os links */
+        flex-direction: column;
+        gap: 1rem;
     }
 
     .button_inicio, .button_sobre, .button_formaçoes, .button_convivio, 
     .button_grupo, .button_outras, .button_instagram {
-        padding: 0.5rem 1rem; /* Reduz o espaçamento interno */
-        font-size: 0.8rem; /* Reduz o tamanho da fonte */
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
     }
 
-    /* Ajusta a seção de início */
     .Inicio {
-        height: auto; /* Ajusta a altura automaticamente */
-        padding: 1rem; /* Adiciona espaçamento interno */
+        height: auto;
+        padding: 1rem;
     }
 
     #img02 {
-        height: auto; /* Ajusta a altura automaticamente */
-        object-fit: contain; /* Garante que a imagem seja exibida corretamente */
+        height: auto;
+        object-fit: contain;
     }
 
-    /* Ajusta os contêineres */
     .conteiner {
-        padding: 1rem; /* Reduz o espaçamento interno */
+        padding: 1rem;
     }
 
-    /* Ajusta os textos */
     .title_prin, .title {
-        font-size: 1.2rem; /* Reduz o tamanho da fonte */
-        margin: 1rem; /* Reduz as margens */
+        font-size: 1.2rem;
+        margin: 1rem;
     }
 
-    /* Ajusta as imagens */
     #img01 {
-        width: 40px; /* Reduz o tamanho do logo */
+        width: 40px;
         height: 40px;
     }
 
     #img_config {
-        width: 100%; /* Faz a imagem ocupar toda a largura disponível */
-        max-width: 300px; /* Define um tamanho máximo */
-        margin: 1rem auto; /* Centraliza a imagem */
+        width: 100%;
+        max-width: 300px;
+        margin: 1rem auto;
     }
 
-    /* Ajusta os grupos */
     .ascom, .grupo_musica, .formacao, .liturgia {
-        flex-direction: column; /* Empilha os itens verticalmente */
-        gap: 1rem; /* Adiciona espaçamento entre os itens */
+        flex-direction: column;
+        gap: 1rem;
     }
 
     .musica-text, .ascom-text, .formacao-text, .liturgia-text {
-        text-align: center; /* Centraliza o texto */
-        margin: 1rem; /* Reduz as margens */
+        text-align: center;
+        margin: 1rem;
     }
 }
 
