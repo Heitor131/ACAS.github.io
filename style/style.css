@@ -202,3 +202,70 @@ nav {
     margin: 3rem;
 }
 
+/* Estilos para telas menores que 768px (celulares e tablets pequenos) */
+@media (max-width: 768px) {
+    /* Ajusta a barra de navegação */
+    .home {
+        flex-direction: column; /* Empilha os itens verticalmente */
+        align-items: center; /* Centraliza os itens */
+        gap: 0.5rem; /* Reduz o espaçamento entre os itens */
+        height: auto; /* Ajusta a altura automaticamente */
+    }
+
+    nav {
+        flex-direction: column; /* Empilha os links verticalmente */
+        gap: 1rem; /* Adiciona espaçamento entre os links */
+    }
+
+    .button_inicio, .button_sobre, .button_formaçoes, .button_convivio, 
+    .button_grupo, .button_outras, .button_instagram {
+        padding: 0.5rem 1rem; /* Reduz o espaçamento interno */
+        font-size: 0.8rem; /* Reduz o tamanho da fonte */
+    }
+
+    /* Ajusta a seção de início */
+    .Inicio {
+        height: auto; /* Ajusta a altura automaticamente */
+        padding: 1rem; /* Adiciona espaçamento interno */
+    }
+
+    #img02 {
+        height: auto; /* Ajusta a altura automaticamente */
+        object-fit: contain; /* Garante que a imagem seja exibida corretamente */
+    }
+
+    /* Ajusta os contêineres */
+    .conteiner {
+        padding: 1rem; /* Reduz o espaçamento interno */
+    }
+
+    /* Ajusta os textos */
+    .title_prin, .title {
+        font-size: 1.2rem; /* Reduz o tamanho da fonte */
+        margin: 1rem; /* Reduz as margens */
+    }
+
+    /* Ajusta as imagens */
+    #img01 {
+        width: 40px; /* Reduz o tamanho do logo */
+        height: 40px;
+    }
+
+    #img_config {
+        width: 100%; /* Faz a imagem ocupar toda a largura disponível */
+        max-width: 300px; /* Define um tamanho máximo */
+        margin: 1rem auto; /* Centraliza a imagem */
+    }
+
+    /* Ajusta os grupos */
+    .ascom, .grupo_musica, .formacao, .liturgia {
+        flex-direction: column; /* Empilha os itens verticalmente */
+        gap: 1rem; /* Adiciona espaçamento entre os itens */
+    }
+
+    .musica-text, .ascom-text, .formacao-text, .liturgia-text {
+        text-align: center; /* Centraliza o texto */
+        margin: 1rem; /* Reduz as margens */
+    }
+}
+
