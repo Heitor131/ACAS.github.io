@@ -92,7 +92,7 @@ nav {
 }
 
 /* Botões da barra de navegação */
-.button_inicio, .button_sobre, .button_formaçoes, .button_convivio, .button_grupo, .button_outras, .button_instagram{
+.button{
     display: inline-block;
     background-color: rgba(255, 255, 255, 0.2);
     color: black;
@@ -108,9 +108,7 @@ nav {
 }
 
 /* Efeito hover nos botões */
-.button_inicio:hover, .button_sobre:hover, .button_formaçao:hover, 
-.button_convivio:hover, .button_grupo:hover, .button_outras:hover, 
-.button_instagram{
+.button:hover {
     background-color: rgba(255, 255, 255, 0.4);
     transform: scale(1.05); /* Aumenta levemente o botão */
 }
