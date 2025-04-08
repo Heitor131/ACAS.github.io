@@ -1,230 +1,203 @@
-/* Estilos básicos (Mobile-first) */
+/* Suaviza a rolagem */
 html {
     scroll-behavior: smooth;
 }
 
+/* Configurações gerais do body */
 body {
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100%;
-    overflow-x: hidden;
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
+    overflow-x: hidden; /* Evita rolagem horizontal */
+    overflow-y: auto; /* Permite rolagem vertical */
+    margin-top: 80px; /* Compensa a altura da barra fixa */
+    scrollbar-width: none;
 }
 
-/* Barra de navegação */
-.home {
+body::-webkit-scrollbar {
+    display: none; /* Oculta a barra de rolagem no Chrome, Edge e Safari */
+}
+
+html, body {
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove espaçamentos padrão */
+    width: 100%; /* Garante que ocupe toda a largura */
+    height: 100%; /* Garante que ocupe toda a altura */
+    overflow-x: hidden; /* Permite barra de rolagem horizontal quando necessário */
+    overflow-y: auto; /* Remove barra de rolagem vertical */
+}
+
+.title_prin{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: center;
+    margin: 3rem;
     gap: 1rem;
-    padding: 1rem;
+    font-size: 1.6rem; /* Tamanho maior para o título principal */
+}
+
+/* Estilo para títulos */
+.title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 3rem;
+    gap: 1rem;
+    font-size: 2rem; /* Tamanho padrão para títulos */
+}
+
+/* Configuração geral dos contêineres */
+.conteiner {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     width: 100%;
-    background-color: #ffffff;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 10;
+    margin: 0 auto; /* Centraliza horizontalmente */
+    padding: 0 1rem; /* Adiciona espaçamento interno */
+    gap: 1rem; /* Espaçamento entre os itens */
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo semi-transparente */
+}
+
+/* Barra de navegação fixa */
+.home {
+    display: flex;
     position: fixed;
     top: 0;
     left: 0;
+    display: flex;
+    justify-content: flex-start; /* Alinha os itens à esquerda */
+    align-items: center; /* Centraliza os itens verticalmente */
+    flex-direction: row; /* Exibe os itens em linha */
+    gap: 1rem; /* Reduz o espaçamento entre os itens */
+    padding: 0.5rem 1rem; /* Ajusta o espaçamento interno */
+    width: 100%;
+    height: 3rem; /* Ajuste a altura, se necessário */
+    z-index: 10;
+    background-color: transparent; /* Fundo semi-transparente */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(1.5px); /* Adiciona um desfoque ao fundo */
 }
 
-#img01 {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
+#grupo, #convivio, #sobre-nos, #formacoes {
+    padding-top: 4rem; /* Adiciona espaço acima da seção */
 }
 
-.acas {
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-align: center;
-    margin: 0;
-}
 
+
+/* Navegação dentro da barra */
 nav {
     display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    width: 100%;
+    gap: 2rem; /* Espaçamento entre os botões */
+}
+
+/* Botões da barra de navegação */
+.button_inicio, .button_sobre, .button_formaçoes, .button_convivio, .button_grupo, .button_outras, .button_instagram{
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: black;
+    padding: 0.8rem 1.5rem; /* Ajuste no espaçamento interno */
+    border-radius: 0.75rem;
+    font-size: 0.9rem; /* Tamanho reduzido para melhor ajuste */
+    font-weight: 600;
     text-align: center;
+    cursor: pointer;
+    text-decoration: none; /* Remove sublinhado */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Adiciona uma borda sutil */
+    transition: all 0.3s ease; /* Suaviza interações */
 }
 
-nav a {
-    display: block;
-    background-color: #f0f0f0;
-    color: #333;
-    padding: 0.8rem;
-    border-radius: 0.5rem;
-    text-decoration: none;
-    font-size: 1rem;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
+/* Efeito hover nos botões */
+.button_inicio:hover, .button_sobre:hover, .button_formaçao:hover, 
+.button_convivio:hover, .button_grupo:hover, .button_outras:hover, 
+.button_instagram{
+    background-color: rgba(255, 255, 255, 0.4);
+    transform: scale(1.05); /* Aumenta levemente o botão */
 }
 
-nav a:hover {
-    background-color: #e0e0e0;
-}
-
-/* Seção de início */
+/* Configuração da seção de início */
 .Inicio {
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+}
+
+
+/* Configuração do conteúdo */
+.content {
+    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 2rem 1rem;
-    margin-top: 6rem; /* Para compensar a barra de navegação fixa */
-    text-align: center;
+    margin-top: 2rem;
+    gap: 1.5rem;
 }
 
+#insta{
+    width: 40px;
+    height: 40px;
+    border-radius: 34%;
+    margin-right: 0.5rem; /* Adiciona um pequeno espaçamento à direita da imagem */
+}
+
+/* Imagem de fundo */
 #img02 {
     width: 100%;
-    max-width: 300px;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* Logo da barra de navegação */
+#img01 {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 0.5rem; /* Adiciona um pequeno espaçamento à direita da imagem */
+}
+
+#img_config{
+    margin: 3rem ;
+    width: 300px;
     height: auto;
     border-radius: 8px;
-    margin-bottom: 1rem;
 }
 
-.title_prin {
-    font-size: 1.4rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
+
+/* Estilo do título "ACAS" */
+.acas {
+    font-size: 1.2rem; /* Ajusta o tamanho da fonte */
+    font-weight: bold; /* Deixa o texto em negrito */
+    margin: 0; /* Remove margens extras */
+    padding: 0; /* Remove espaçamentos extras */
+    justify-content: center;
+    gap: 0.1rem;
 }
 
-.title_prin + p {
-    font-size: 1rem;
-    color: #555;
-}
 
-/* Seções gerais */
-.conteiner {
+
+.ascom,.grupo_musica,.formacao, .liturgia {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem;
-    margin: 1rem 0;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.title {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-    text-align: center;
-}
-
-.content {
-    font-size: 1rem;
-    color: #333;
-    text-align: center;
-    line-height: 1.5;
-}
-
-/* Imagens nas seções */
-#img_config {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    border-radius: 8px;
-    margin: 1rem 0;
-}
-
-/* Grupos */
-.ascom, .grupo_musica, .formacao, .liturgia {
-    display: flex;
-    flex-direction: column;
     align-items: center;
     gap: 1rem;
-    margin: 1rem 0;
 }
 
 .musica-text, .ascom-text, .formacao-text, .liturgia-text {
     text-align: center;
-    font-size: 1rem;
-    color: #555;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 3rem;
 }
-
-/* Estilos para telas maiores (Desktop) */
-@media (min-width: 768px) {
-    /* Barra de navegação */
-    .home {
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 0.5rem 2rem;
-        height: 4rem;
-    }
-
-    nav {
-        flex-direction: row;
-        justify-content: flex-end;
-        gap: 2rem;
-    }
-
-    nav a {
-        font-size: 0.9rem;
-        padding: 0.5rem 1rem;
-    }
-
-    #img01 {
-        width: 50px;
-        height: 50px;
-    }
-
-    /* Seção de início */
-    .Inicio {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        padding: 4rem 2rem;
-        margin-top: 4rem;
-    }
-
-    #img02 {
-        max-width: 500px;
-    }
-
-    .title_prin {
-        font-size: 2rem;
-        text-align: left;
-    }
-
-    .title_prin + p {
-        font-size: 1.2rem;
-        text-align: left;
-    }
-
-    /* Seções gerais */
-    .conteiner {
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 2rem;
-    }
-
-    .title {
-        font-size: 2rem;
-        text-align: left;
-    }
-
-    .content {
-        font-size: 1.2rem;
-        text-align: left;
-    }
-
-    /* Imagens nas seções */
-    #img_config {
-        max-width: 400px;
-    }
-
-    /* Grupos */
-    .ascom, .grupo_musica, .formacao, .liturgia {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    .musica-text, .ascom-text, .formacao-text, .liturgia-text {
-        text-align: left;
-    }
-}
-
